@@ -83,7 +83,6 @@ flowchart LR
 3. Store validated records in the Microsoft SQL database.
 4. Retrieve and manage expense information through the application workflow.
 5. Use consistent, database-backed records to support accurate reporting and audits.
-## Getting Started
 
 ## Getting Started
 <details>
