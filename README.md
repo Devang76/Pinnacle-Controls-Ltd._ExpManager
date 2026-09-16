@@ -1,18 +1,63 @@
+<div align="center">
+
 # Pinnacle Industrial Controls Ltd. Expenditure Manager
 
+**A C# and Microsoft SQL expense-tracking application for accurate, auditable financial records.**
+
+![C#](https://img.shields.io/badge/C%23-Windows%20Forms-512BD4?logo=dotnet&logoColor=white)
+![Database](https://img.shields.io/badge/Database-Microsoft%20SQL%20Server-CC2927?logo=microsoftsqlserver&logoColor=white)
+![IDE](https://img.shields.io/badge/IDE-Visual%20Studio%202022-5C2D91?logo=visualstudio&logoColor=white)
+![Impact](https://img.shields.io/badge/Audit%20discrepancies-30%25%20reduction-1F8A70)
+
+</div>
+
+> **Project focus:** replace error-prone manual expense entry with a validated, database-backed desktop workflow.
+
+| Navigate | Navigate | Navigate |
+| :--- | :--- | :--- |
+| [Impact](#impact) | [Architecture](#application-workflow) | [Setup](#getting-started) |
+
+---
+
 A desktop expense-tracking application built to improve the accuracy, organization, and auditability of financial records at Pinnacle Industrial Controls Ltd.
-
-The project replaces error-prone manual expense entry with a structured, database-backed workflow. It was developed with C# and Microsoft SQL, using application-level validation and centralized record management to improve data quality.
-
-## Business Problem
-
-Manual expense-record management can create inconsistent entries, duplicated data, and audit discrepancies. This project addresses that challenge by providing a structured application for capturing and managing expense information through a validated user interface and a Microsoft SQL database.
-
-## Impact
 
 - Eliminated manual-entry errors through structured data capture and validation.
 - Reduced audit discrepancies by **30%**.
 - Improved the organization and accuracy of expense-related financial records.
+| Outcome | Result |
+| --- | --- |
+| Data quality | Eliminated manual-entry errors through structured capture and validation |
+| Audit readiness | **30% reduction** in audit discrepancies |
+| Record management | Centralized, organized financial records in Microsoft SQL Server |
+
+## Application Workflow
+
+```mermaid
+flowchart LR
+    A[Expense information] --> B[Windows Forms application]
+    B --> C{Validate input}
+    C -->|Valid| D[(Microsoft SQL Server)]
+    C -->|Needs correction| B
+    D --> E[Centralized expense records]
+    E --> F[Accurate reporting and audit support]
+
+    classDef app fill:#512BD4,color:#ffffff,stroke:#3d1f9d;
+    classDef data fill:#CC2927,color:#ffffff,stroke:#8c1518;
+    classDef outcome fill:#1F8A70,color:#ffffff,stroke:#146149;
+    class B app;
+    class D data;
+    class E,F outcome;
+```
+
+<details>
+<summary><strong>How the workflow improves record quality</strong></summary>
+
+1. An employee enters expense information through the desktop application.
+2. The application checks input before a record is saved.
+3. Validated information is stored centrally in Microsoft SQL Server.
+4. Consistent records improve traceability and reduce discrepancies during audit review.
+
+</details>
 
 ## Key Features
 
@@ -21,15 +66,14 @@ Manual expense-record management can create inconsistent entries, duplicated dat
 - Validation workflows to support accurate and consistent data capture.
 - Database-driven record management for improved traceability and audit readiness.
 - Application workflows designed around expense-management requirements.
-
-## Technology Stack
-
-| Category | Technology |
+| Feature | Value |
 | --- | --- |
-| Programming language | C# |
-| Desktop application | Windows Forms |
-| Database | Microsoft SQL Server Express 2022 |
-| Database management | SQL Server Management Studio 21 |
+| C# Windows Forms interface | Provides a structured workflow for entering expense information |
+| Microsoft SQL-backed storage | Centralizes expense records for reliable retrieval and management |
+| Input validation | Supports accurate and consistent data capture |
+| Database-driven records | Improves traceability and audit readiness |
+| Requirements-based workflow | Aligns the application with expense-management needs |
+
 | Development environment | Visual Studio 2022 |
 
 ## Project Workflow
@@ -39,37 +83,31 @@ Manual expense-record management can create inconsistent entries, duplicated dat
 3. Store validated records in the Microsoft SQL database.
 4. Retrieve and manage expense information through the application workflow.
 5. Use consistent, database-backed records to support accurate reporting and audits.
-
 ## Getting Started
 
-### Prerequisites
+## Getting Started
+<details>
+<summary><strong>Prerequisites and local setup</strong></summary>
 
-- Visual Studio 2022 or later with the .NET desktop-development workload.
-- Microsoft SQL Server Express 2022 or a compatible Microsoft SQL Server instance.
-- SQL Server Management Studio 21 or later.
 
-### Setup
+</details>
 
-1. Clone this repository.
+## Visual Preview
 
-   ```bash
-   git clone https://github.com/Devang76/Pinnacle-Controls-Ltd._ExpManager.git
-   ```
+> Add screenshots here after uploading them to `docs/images/`. Good options are the expense-entry form, the database schema, and a successful record-management screen.
 
-2. Open the solution file (`.sln`) in Visual Studio.
-3. Create or restore the project's database using the SQL scripts included in this repository, if available.
-4. Update the application's database connection string with your local SQL Server instance details.
-5. Build and run the application from Visual Studio.
+```text
+docs/
+└── images/
+    ├── expense-entry-form.png
+    ├── database-schema.png
+    └── application-dashboard.png
+```
 
-> **Note:** Update the database name, server name, authentication method, and connection-string settings to match your local environment before running the application.
+Then embed an image in this section with:
+
+```markdown
+![Expense entry form](docs/images/expense-entry-form.png)
+```
 
 ## Resume Summary
-
-Designed and developed a C# expense-tracking application backed by Microsoft SQL that improved financial-record accuracy, eliminated manual-entry errors, and reduced audit discrepancies by 30%.
-
-## Author
-
-**Devang Mestri**
-
-- LinkedIn: [linkedin.com/in/devangmestry](https://www.linkedin.com/in/devangmestry/)
-- GitHub: [github.com/Devang76](https://github.com/Devang76)
